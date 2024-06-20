@@ -9,7 +9,7 @@ public class SquareHollowPattern {
        for(int i=0; i<k; i++){
            for(int j=0; j<k; j++){
                if(i==0 || i== k-1 || j==0 || j== k-1){
-                   System.out.print("* ");
+                   System.out.print("1 ");
                }
              else {
                  System.out.print("  ");
