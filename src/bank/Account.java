@@ -1,22 +1,33 @@
 package bank;
-
 public class Account {
-  int customer_id;
-  int balance;
-  public Account(int customer_id, int balance)
-  {
-      this.customer_id=customer_id;
+  //String name;
+  int accNo;
+  float balance;
+  public Account(int accNo,float balance) {
+      //this.name=name;
+      this.accNo=accNo;
       this.balance=balance;
   }
-  public  int check_balance()
-  {
-     return this.balance;
-  }
-public int update_balance(int amount)
-{
-    this.balance=this.balance+amount;
-    return this.balance;
+public void checkBalance() {
+      System.out.println("balance : "+balance);
+
 }
+public void cashWithdraw(float amount) {
+      if(amount>balance) {
+          System.out.print("low balance");
+      }
+     else {
+         System.out.println("withdraw successful");
+         balance=balance-amount;}
+         checkBalance();
+     }
+
+public float cashDeposit(float money) {
+
+      System.out.println("cash deposit successfully");
+    balance=balance+money;
+  return balance;
+  }
 
 
 }
